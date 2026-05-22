@@ -1,3 +1,12 @@
+```yaml
+embedders:
+  # Text embedding model for vector database operations
+  vanna_embedder:
+    _type: nim
+    model_name: "nvidia/llama-nemotron-embed-1b-v2"
+    base_url: ${NVIDIA_BASE_URL}
+```
+
 **整體結構**
 
 這個 workspace 是一個「課程實作 + Python agent + Next.js UI」的專案。核心執行邏輯在 asset_lifecycle_management_agent，教學流程在根目錄 notebooks，前端介面在 NAT_Toolkit-UI。
