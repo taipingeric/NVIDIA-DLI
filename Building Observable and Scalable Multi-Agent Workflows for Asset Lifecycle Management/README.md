@@ -349,6 +349,52 @@ Retrieve sensor_measurement_4 data for unit 50 in FD001 and plot it with a movin
 ### Step 6: 最終驗證
 
 ### Step 7: 繳交
+
+# Optional_ALM_Codegen.ipynb: Code Generation & Complex Queries
+
+### Step 1: 檢查Sandbox環境是否正常運作
+
+### Step 2: 更新config
+
+1. 新增`llms`
+```yaml
+coding_llm:
+    _type: openai
+    model_name: "gpt-4.1-mini"
+    api_key: ${OPENAI_API_KEY}
+    base_url: "https://api.openai.com/v1"
+```
+2. 新增`functions`
+```yaml
+code_generation_assistant:
+    _type: code_generation_assistant
+    llm_name: coding_llm
+    code_execution_tool: code_execution
+    verbose: true
+    sandbox_db_path: "/database/nasa_turbo.db"
+    allowed_libraries: [
+        "pandas", "numpy", "matplotlib", "seaborn",
+        "sqlite3", "json", "math", "statistics",
+        "os", "pathlib", "datetime", "re", "csv",
+        "scipy", "sklearn"
+    ]
+
+code_execution:
+    _type: code_execution
+    uri: http://code_execution_sandbox:6000/execute
+    sandbox_type: local
+    max_output_characters: 2000
+```
+3. 綁定工具至 agent
+```yaml
+tool_names: [
+    sql_retriever, predict_rul,
+    plot_distribution, plot_line_chart, plot_comparison,
+    anomaly_detection, plot_anomaly,
+    code_generation_assistant   # new
+]
+```
+4. 開始測試
 ---
 
 **整體結構**
