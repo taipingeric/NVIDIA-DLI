@@ -201,18 +201,18 @@ from .recommenders import action_recommendation_tool
 
 # 3_ALM_Observability.ipynb: Observability & Monitoring
 
-安裝指令：
-
-```bash
-source /opt/predm-lab/bin/activate
-uv pip install "arize-phoenix==13.0.3" "arize-phoenix-evals==2.13.0"
-```
-
 啟動指令：
 
 ```bash
 source /opt/predm-lab/bin/activate
 phoenix serve
+```
+
+安裝指令(啟動失敗時)：
+
+```bash
+source /opt/predm-lab/bin/activate
+uv pip install "arize-phoenix==13.0.3" "arize-phoenix-evals==2.13.0"
 ```
 
 Step3: 在 `config-reasoning.yml` 中開啟 Phoenix Tracing：
