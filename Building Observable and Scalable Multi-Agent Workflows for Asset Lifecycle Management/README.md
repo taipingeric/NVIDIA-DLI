@@ -201,8 +201,6 @@ from .recommenders import action_recommendation_tool
 
 # 3_ALM_Observability.ipynb: Observability & Monitoring
 
-[BUG]: nVidia Container目前安裝phoenix 有版本問題
-
 安裝指令：
 
 ```bash
