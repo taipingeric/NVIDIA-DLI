@@ -63,4 +63,3 @@ Provisioning 是建立聯邦學習系統的重要步驟，用於產生 Server、
 # 開始學習！
 
 接下來，讓我們先從 **NVIDIA FLARE Provisioning 簡介**開始，了解如何建立聯邦學習系統所需的基本設定與部署流程。
-ㄋ
