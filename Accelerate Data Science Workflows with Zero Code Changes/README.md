@@ -754,4 +754,6 @@ RAPIDS 生態系的一大特點，是盡量讓使用者沿用熟悉的 API：
 2. **cuML**：讓機器學習 estimator 可以更彈性地在 CPU/GPU 間切換。
 3. **cuGraph**：讓 NetworkX-style graph analytics 可以利用 GPU 處理大型圖資料。
 
-教學時可以把「zero code changes」作為主線，但也要提醒學員：真正的效能最佳化仍需要理解資料規模、演算法特性、GPU 支援度與 profiling 結果。這樣學員不只會執行 notebook，也能把這些方法轉移到自己的資料科學專案中。
+## 補充
+
+* [10 Minutes to cuDF and Dask cuDF](https://docs.rapids.ai/api/cudf/stable/user_guide/10min/)
