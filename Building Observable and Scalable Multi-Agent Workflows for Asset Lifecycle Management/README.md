@@ -1,3 +1,5 @@
+Course link: https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+C-MF-03+V1
+
 # 0_ALM_Database_Setup.ipynb
 
 1. 下載config-reasoning_temp.yml，改名為config-reasoning.yml，放在config目錄
